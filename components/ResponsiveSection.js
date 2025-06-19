@@ -8,7 +8,7 @@ const ResponsiveSection = () => {
         <div className="flex-1 flex flex-col justify-center space-y-4">
           <h1 className="text-4xl myBlack">Milano Moda</h1>
           <p className="text-gray-600">
-            Step into your forever with elegance and grace. At Milano Moda, our bridal dress collection is designed for the modern woman—where timeless silhouettes meet thoughtful craftsmanship. Every gown is created with care, blending couture detailing, comfort, and individuality for your walk down the aisle and beyond. From intimate ceremonies to grand celebrations, Milano Moda dresses are made to carry you beautifully through every moment of your love story.
+            Step into your forever with elegance and grace. At Milano Moda, all kind of dresses is designed for the modern woman—where timeless silhouettes meet thoughtful craftsmanship. Every gown is created with care, blending couture detailing, comfort, and individuality for your walk down the aisle and beyond. From intimate ceremonies to grand celebrations, Milano Moda dresses are made to carry you beautifully through every moment of your love story.
           </p>
           <a
             href="/shop"

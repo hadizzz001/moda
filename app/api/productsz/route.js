@@ -15,19 +15,21 @@ export async function GET(req) {
 
     const skip = (page - 1) * limit;
 
-    const category = searchParams.getAll('category'); 
+    // Get filters from query string
+    const category = searchParams.getAll('category');
+    const subcategory = searchParams.getAll('subcategory');
+    const brand = searchParams.getAll('brand');
 
-    // Build query to filter by category and exclude 'Pool Trays'
+    // Build MongoDB query based on filters
     const query = {};
-
     if (category.length > 0) {
-      query.$and = [
-        { category: { $in: category } },
-        { category: { $ne: 'Pool Trays' } }
-      ];
-    } else {
-      // If no category filter provided, just exclude 'Pool Trays'
-      query.category = { $ne: 'Pool Trays' };
+      query.category = { $in: category };
+    }
+    if (subcategory.length > 0) {
+      query.subcategory = { $in: subcategory };
+    }
+    if (brand.length > 0) {
+      query.brand = { $in: brand };
     }
 
     const total = await collection.countDocuments(query);

@@ -19,7 +19,7 @@ const Page = () => {
   const [quantity, setQuantity] = useState(1);
   const searchParams = useSearchParams();
   const search = searchParams.get('id');
-  let imgs, title, price, desc, cat, brand, discount, id, stock, type, color
+  let imgs, title, price, desc, cat, brand, discount, id, stock, type, color, sub
   const { cart, addToCart, quantities } = useCart();
   const { isBooleanValue, setBooleanValue } = useBooleanValue();
   const isInCart = cart?.some((item) => item._id === search);
@@ -65,6 +65,7 @@ const Page = () => {
     stock = allTemp1.stock;
     type = allTemp1.type;
     color = allTemp1.color;
+    sub = allTemp1.subcategory;
   }
 
 
@@ -278,6 +279,17 @@ const Page = () => {
                       Category: {cat}
                     </p>
 
+                    {sub ? (
+                      <p className='mb-2 myGray'>
+                        Subcategory: {sub}
+                      </p>
+                    ) : (
+                      <></>
+                    )}
+
+
+
+
                   </span>
                   <div className="ApexPriceAndFreeShippingWrapper">
 
@@ -387,25 +399,25 @@ const Page = () => {
                               <span className="ProvidersSingleProduct--selected flex">
                                 {!isOutOfStock ? (
                                   <>
-                                  <button
-                                    type="submit"
-                                    className="AddToCart HtmlProductAddToCart"
-                                    style={{ borderRadius: "0" }}
-                                    disabled={isCollection && !selectedColor}
-                                  >
-                                    <span>ADD TO BAG</span>
-                                  </button>
+                                    <button
+                                      type="submit"
+                                      className="AddToCart HtmlProductAddToCart"
+                                      style={{ borderRadius: "0" }}
+                                      disabled={isCollection && !selectedColor}
+                                    >
+                                      <span>ADD TO BAG</span>
+                                    </button>
                                     <a
-                                    onClick={toggleFavorite}
-                                    className="AddToCart m-4   "
-                                    aria-label="Toggle Favorite"
-                                  >
-                                    <Heart
-                                      size={24}
-                                      className={`transition-all duration-200 ${isFavorite ? 'fill-[#dbc0d3] text-[#dbc0d3]' : 'text-gray-400'
-                                        }`}
-                                    />
-                                  </a>
+                                      onClick={toggleFavorite}
+                                      className="AddToCart m-4   "
+                                      aria-label="Toggle Favorite"
+                                    >
+                                      <Heart
+                                        size={24}
+                                        className={`transition-all duration-200 ${isFavorite ? 'fill-[#dbc0d3] text-[#dbc0d3]' : 'text-gray-400'
+                                          }`}
+                                      />
+                                    </a>
                                   </>
                                 ) : (
                                   <OutOfStockComponent itemName={title} />

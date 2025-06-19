@@ -754,7 +754,7 @@
    display: inline-block;
  }
 
- 
+
 
  .cart-count {
    position: absolute;
@@ -1084,7 +1084,7 @@
  .menuicon svg {
    stroke-width: 1px !important;
  }
- 
+
 
  @media (max-width: 768px) {
    #PageMenuPreHeader3z {
@@ -1141,75 +1141,107 @@
  @media (max-width: 720px) {
    #page-header-search-2 {
      position: fixed;
-     left: 20em  ;
+     left: 20em;
      bottom: 1em !important;
      top: auto !important;
    }
  }
 
  @media (max-width: 720px) {
-    #page-header-search-3 {
-        position: fixed;
-        left: 2em;
-        bottom: 1em !important;
-        top: auto !important;
+   #page-header-search-3 {
+     position: fixed;
+     left: 2em;
+     bottom: 1em !important;
+     top: auto !important;
+   }
+ }
+
+ .menuicon3 svg {
+   stroke: none !important;
+ }
+
+ #search-menu-overlay {
+   background: white !important;
+   height: 60em !important;
+   z-index: 0 !important;
+ }
+
+ .searchOverlay {
+   margin-top: 5em
+ }
+
+ .menuicon4 svg {
+   stroke: #999 !important;
+ }
+
+ .menuicon svg {
+   stroke-width: 2px !important;
+ }
+
+ .SiteFooter__wrapper {
+   background: #dbc0d3 !important;
+ }
+
+ .NewsletterSignupFooter {
+   background: #dbc0d3 !important;
+ }
+
+ @media (max-width: 768px) {
+   .SiteFooterSitemap .column {
+     border-top: 1px solid #666;
+     background: #dbc0d3 !important;
+   }
+ }
+
+ .SiteFooter__wrapper svg {
+   fill: #000 !important;
+ }
+
+ .NewsletterSignupFooter_Component .klaviyo_submit_button {
+   background: #000 !important;
+ }
+
+ .SiteFooter__wrapper a,
+ .SiteFooter__wrapper a:visited .SiteFooter__wrapper a:focus .SiteFooter__wrapper a:active {
+   color: #000 !important;
+ }
+
+ .sywPaymentOptions {
+   padding: 0px !important;
+ }
+
+ .HtmlProductAddToCart {
+   background-color: #dbc0d3 !important;
+   color: black !important
+ }
+
+
+ @media (min-width: 1200px) and (pointer: fine) {
+   .secondaryLevel ul {
+    position: fixed;
+    top: 4.3em;
+    right: 0em;
+   }
+ }
+
+ @media (max-width: 720px) {
+    #page-header-search-2 { 
+        left: 20em; 
     }
 }
 
-.menuicon3 svg {
-    stroke: none !important;
-}
-
-#search-menu-overlay{
-  background: white !important;
-    height: 60em !important;
-    z-index: 0 !important;
-}
-
-.searchOverlay{
-  margin-top: 5em
-}
-
-.menuicon4 svg {
-    stroke: #999 !important;
-}
-
-.menuicon svg {
-    stroke-width: 2px !important;
-}
-
-.SiteFooter__wrapper {
-    background: #dbc0d3 !important; 
-}
-
-.NewsletterSignupFooter { 
-    background: #dbc0d3 !important; 
-}
-
-@media (max-width: 768px) {
-    .SiteFooterSitemap .column {
-        border-top: 1px solid #666;
-        background: #dbc0d3 !important; 
+@media (max-width: 720px) {
+    #page-header-search-1 { 
+        left: 12em; 
     }
 }
 
-.SiteFooter__wrapper svg {
-    fill: #000 !important;
+@media (max-width: 720px) {
+    #page-header-search-3 { 
+        left: 5em; 
+    }
 }
 
-.NewsletterSignupFooter_Component .klaviyo_submit_button { 
-    background: #000 !important; 
-}
-
-.SiteFooter__wrapper a, .SiteFooter__wrapper a:visited .SiteFooter__wrapper a:focus .SiteFooter__wrapper a:active {
-    color: #000 !important; 
-}
-
-.sywPaymentOptions { 
-    padding: 0px !important; 
-}
-
-.HtmlProductAddToCart {
-    background-color: #dbc0d3 !important;
-    color:black !important
+.br_text-base-sans-spaced { 
+  color: #000;
 }

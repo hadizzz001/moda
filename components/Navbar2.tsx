@@ -149,7 +149,7 @@ function NavBar() {
             data-auto-id="true"
             id="page-header-homepage-1"
           >
-            <img id="logotoedits" src="https://res.cloudinary.com/dmyudwjwx/image/upload/v1750089515/black_olgyju.webp" alt="" width={100} />
+            <img id="logotoedits" src="https://res.cloudinary.com/dmyudwjwx/image/upload/v1750089515/black_olgyju.webp" alt="" width={140} />
           </a>
           <button id='hamburger' className="hamburger xl:pointer-fine:br_invisible" onClick={handleClick}>
             <span />

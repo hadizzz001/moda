@@ -16,25 +16,31 @@ export async function GET(req) {
     const skip = (page - 1) * limit;
 
     const search = searchParams.get('q');
-    const cat = searchParams.get('cat'); 
+    const cat = searchParams.get('cat');
+    const sub = searchParams.get('sub');
+    const brnd = searchParams.get('brnd');
 
     // Build MongoDB query
-    const query = { category: { $ne: 'Pool Trays' } }; // Always exclude 'Pool Trays'
+    const query = {};
 
     if (search) {
-      query.title = { $regex: search, $options: 'i' }; // case-insensitive search
+      query.title = { $regex: search, $options: 'i' }; // case-insensitive partial match
     }
 
     if (cat) {
       if (cat === 'yes') {
         query.arrival = 'yes';
       } else {
-        query.category = { 
-          $regex: `^${cat}$`, 
-          $options: 'i', 
-          $ne: 'Pool Trays' // Combine regex and exclusion
-        };
+        query.category = { $regex: `^${cat}$`, $options: 'i' };
       }
+    }
+
+    if (sub) {
+      query.subcategory = { $regex: `^${sub}$`, $options: 'i' };
+    }
+
+    if (brnd) {
+      query.brand = { $regex: `^${brnd}$`, $options: 'i' };
     }
 
     const total = await collection.countDocuments(query);
