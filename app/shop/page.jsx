@@ -123,12 +123,12 @@ useEffect(() => {
           </div>
         </header>
         <div className="br_flex">
-          <div id='filterId1' style={{marginTop:'4em'}} className=" br_text-grey-500 br_fixed br_top-full br_h-full br_bottom-0 br_left-0 br_right-0 br_bg-white br_z-[9999] br_mt-0 br_flex br_flex-col br_justify-between br_transition-opacity br_duration-300 md:br_mt-14 md:br_flex-[0_0_280px] md:br_z-[9980]  br_translate-y-0 br_opacity-0 md:br_opacity-100 md:br_block md:br_relative md:br_h-auto md:br_transform-none">
+          <div id='filterId1' style={{marginTop:'2em'}} className=" br_text-grey-500 br_fixed br_top-full br_h-full br_bottom-0 br_left-0 br_right-0 br_bg-white br_z-[9999] br_mt-0 br_flex br_flex-col br_justify-between br_transition-opacity br_duration-300 md:br_mt-14 md:br_flex-[0_0_280px] md:br_z-[9980]  br_translate-y-0 br_opacity-0 md:br_opacity-100 md:br_block md:br_relative md:br_h-auto md:br_transform-none">
             <div className="br_items-center md:br_hidden br_grid br_px-4 br_grid-cols-[repeat(3,1fr)] br_border-solid br_border-0 br_border-b br_border-grey-300">
 
               <div className="br_text-base-sans-bold-stretched br_tracking-cta br_text-grey-600 br_my-4 br_py-2 br_px-0 br_border-none br_bg-transparent"></div>
-              <h3 className="br_text-2xl-serif br_text-center br_text-grey-600">Filters</h3>
-              <button onClick={handleClick2} className="br_flex br_justify-end br_border-none br_bg-transparent br_cursor-pointer br_p-0" id='button111'>
+              <h3 className="br_text-2xl-serif br_text-center br_text-grey-600 myBlack">Filters</h3>
+              <button onClick={handleClick2} className="br_flex br_justify-end br_border-none br_bg-transparent br_cursor-pointer br_p-0 myBlack" id='button111'>
                 <span className="br_w-6 br_h-6 br_rotate-45">
                   <svg
                     width={14}
@@ -256,10 +256,10 @@ useEffect(() => {
             </div>
           </div>
 
-          <div className="br_flex-1" onClick={handleClick1}>
+          <div className="br_flex-1" >
             <div className="br_flex br_justify-between br_items-center br_gap-4 br_mb-2 br_px-4 br_my-4 md:br_justify-end">
               <div className="br_flex br_gap-4 br_items-center md:br_hidden">
-                <button className="br_leading-5 br_text-base-sans-bold-stretched br_px-4 br_py-2 br_rounded br_border br_border-solid br_flex br_gap-2 br_justify-center br_items-center br_whitespace-nowrap br_bg-transparent br_text-grey-600 br_border-grey-300">
+                <button onClick={handleClick1} className="br_leading-5 br_text-base-sans-bold-stretched br_px-4 br_py-2 br_rounded br_border br_border-solid br_flex br_gap-2 br_justify-center br_items-center br_whitespace-nowrap br_bg-transparent br_text-grey-600 br_border-grey-300 myBlack">
                   <svg width={16} height={14}>
                     <g fill="currentColor" fillRule="nonzero">
                       <path d="M4.699 0c-.94 0-1.739.588-1.997 1.395H.564A.541.541 0 000 1.939c0 .305.258.545.587.545h2.138C2.96 3.29 3.783 3.88 4.722 3.88c.964 0 1.763-.589 2.021-1.395h8.67c.329 0 .587-.24.587-.545 0-.305-.258-.544-.587-.544h-8.67C6.461.588 5.663 0 4.699 0zm.023 1.09c.494 0 .917.37.917.85 0 .479-.423.85-.917.85-.493 0-.916-.371-.916-.85 0-.48.423-.85.916-.85z" />
@@ -361,11 +361,11 @@ useEffect(() => {
   </button>
 
   <span
-    className="flex items-center justify-center text-white text-[11px]"
+    className="flex items-center justify-center text-black text-[11px]"
     style={{
       width: '30px',
       height: '30px',
-      backgroundColor: '#5bbccd',
+      backgroundColor: '#dbc0d3',
       borderRadius: '50%',
     }}
   >
