@@ -10,6 +10,7 @@ import autoTable from 'jspdf-autotable';
 import axios from 'axios';
 import intlTelInput from 'intl-tel-input';
 import 'intl-tel-input/build/css/intlTelInput.css';
+import ElementsForm from "../../components/ElementsForm";
 
 
 
@@ -27,6 +28,7 @@ const page = () => {
   const [total, setTotal] = useState((subtotal + deliveryFee).toFixed(2));
   const [showLink, setShowLink] = useState(false);
   const [country, setCountry] = useState('');
+  const [paymentMethod, setPaymentMethod] = useState('cash');
   const [inputs, setInputs] = useState({
     fname: "",
     lname: "",
@@ -46,7 +48,9 @@ const page = () => {
   });
 
 
-
+  const handlePaymentChange = (e) => {
+    setPaymentMethod(e.target.value);
+  };
 
   const handleRemoveFromCart = (itemId) => {
     removeFromCart(itemId);
@@ -1335,7 +1339,53 @@ const page = () => {
 
 
                     {total !== null && (
-                      <WhatsAppButton inputs={inputs} items={cart} total={total} delivery={deliveryFee} code={promoCode} />
+                      <div>
+                        <h3 className="text-lg font-semibold mb-2 myBlack">Select Payment Method:</h3>
+                        <div className="mb-4">
+                          <label className="mr-4 myBlack">
+                            <input
+                              type="radio"
+                              value="cash"
+                              checked={paymentMethod === 'cash'}
+                              onChange={handlePaymentChange}
+                              className="mr-2 myBlack"
+                            />
+                            Cash on Delivery
+                          </label>
+                          <label className="myBlack">
+                            <input
+                              type="radio"
+                              value="online"
+                              checked={paymentMethod === 'online'}
+                              onChange={handlePaymentChange}
+                              className="mr-2 myBlack"
+                            />
+                            Online Payment
+                          </label>
+                        </div>
+
+                        {total !== null && (
+                          <>
+                            {paymentMethod === 'cash' ? (
+                              <WhatsAppButton
+                                inputs={inputs}
+                                items={cart}
+                                total={total}
+                                delivery={deliveryFee}
+                                code={promoCode} 
+                              />
+                            ) : (
+                              <ElementsForm
+                                personal={inputs} 
+                                finalTotal={total} 
+                                delivery={deliveryFee} 
+                                code={promoCode} 
+                              />
+                            )}
+                          </>
+                        )}
+                      </div>
+
                     )}
 
 

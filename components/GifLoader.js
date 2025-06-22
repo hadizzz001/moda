@@ -26,11 +26,11 @@ const SLoader = ({ onComplete }) => {
         transition={{ duration: 2, ease: "easeInOut" }}
       >
         <img
-          src="https://res.cloudinary.com/dmyudwjwx/image/upload/v1750090557/ico_atse4z.webp"
+          src="https://res.cloudinary.com/dmyudwjwx/image/upload/v1750089515/black_olgyju.webp"
           alt="S Loader"
-          width={150}
-          height={150}
-          className="w-48 h-48 object-contain"
+          width={250}
+          height={250}
+          className="w-64 h-64 object-contain"
         />
       </motion.div>
     </div>

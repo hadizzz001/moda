@@ -205,7 +205,7 @@ function NavBar() {
           </div>
           <nav className="secondaryLevel">
             <ul>
-              <li className="mobile-hidden">
+              <li className="mobile-hidden " id="mypccart" >
                 <a
                   className="secondaryLevel_Item br_no-underline js-open-newsletter"
                   data-auto-id="true"

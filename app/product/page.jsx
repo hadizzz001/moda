@@ -53,6 +53,11 @@ const Page = () => {
   }, []);
 
 
+  useEffect(() => { 
+setQuantity(1);
+  }, [selectedColor, selectedSize]);
+
+
 
 
   if (allTemp1) {
