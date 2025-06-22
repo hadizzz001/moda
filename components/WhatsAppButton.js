@@ -98,6 +98,7 @@ const WhatsAppButton = ({ inputs, items, total, delivery, code }) => {
     const url = createWhatsAppURL(inputs, items, total, delivery, code, subtotal);
     window.open(url, '_blank');
     createOrder(); 
+    clearCart();
     setError(null);
   };
 
