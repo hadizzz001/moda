@@ -50,7 +50,7 @@ export default function RootLayout({
     property="og:title"
   />
   <meta
-    content="https://milanomoda.art/"
+    content="https://milanomoda.org/"
     name=""
     property="og:url"
   />

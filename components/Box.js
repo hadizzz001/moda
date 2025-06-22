@@ -12,7 +12,7 @@ export default function OfferPopup() {
     if (
       window.location.hostname === "localhost" ||
       window.location.hostname === "milanomoda.netlify.app" ||
-      window.location.hostname === "milanomoda.art"
+      window.location.hostname === "milanomoda.org"
     ) {
       const hasSeenPopup = localStorage.getItem("hasSeenOfferPopup");
       if (!hasSeenPopup) {

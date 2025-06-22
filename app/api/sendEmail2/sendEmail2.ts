@@ -59,7 +59,7 @@ Delivery fee: $${delivery}
   await resend.emails.send({
     from: "info@anazon.hadizproductions.com",
     to: "alihadimedlej001@gmail.com",
-    // to: "info@milanomoda.art",
+    // to: "info@milanomoda.org",
     subject: "New Order from Website",
     text: message,
   });

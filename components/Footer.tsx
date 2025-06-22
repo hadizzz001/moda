@@ -349,12 +349,12 @@ const Footer = () => {
                                     <span>
                                         Contact{" "}
                                         <a
-                                            href="mailto:info@milanomoda.art"
+                                            href="mailto:info@milanomoda.org"
                                             data-auto-id="true"
                                             id="page-footer-mailto-support-bellroy-com-1"
                                             className='myGray'
                                         >
-                                            info@milanomoda.art
+                                            info@milanomoda.org
                                         </a>
                                     </span>
                                 </p>

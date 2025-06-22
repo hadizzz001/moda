@@ -26,7 +26,7 @@ const MyCarousel = () => {
   }, []);
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full mt-[8em]">
       <Swiper
         modules={[Autoplay, EffectFade]}
         effect="fade"
