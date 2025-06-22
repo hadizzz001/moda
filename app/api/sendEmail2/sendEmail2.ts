@@ -1,6 +1,5 @@
 "use server";
-import { Resend } from "resend";
-import { redirect } from 'next/navigation';
+import { Resend } from "resend"; 
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -58,8 +57,8 @@ Delivery fee: $${delivery}
 
   await resend.emails.send({
     from: "info@anazon.hadizproductions.com",
-    to: "alihadimedlej001@gmail.com",
-    // to: "info@milanomoda.org",
+    // to: "alihadimedlej001@gmail.com",
+    to: "info@milanomoda.org",
     subject: "New Order from Website",
     text: message,
   });
