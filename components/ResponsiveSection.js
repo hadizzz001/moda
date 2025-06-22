@@ -22,7 +22,7 @@ const ResponsiveSection = () => {
         <div className="flex-1 flex gap-4 justify-center md:justify-end">
           <div className="relative w-1/2 h-[240px] md:w-[200px]">
             <img
-              src="https://res.cloudinary.com/dmyudwjwx/image/upload/v1750179058/portrait-gorgeous-woman-wearing-beautiful-white-dress-staircase-inside-her-house_144962-18725_vvw290.webp"
+              src="https://res.cloudinary.com/dmyudwjwx/image/upload/v1750612132/0c0c647e-8444-4f28-b899-5a186cab56f6_tkzh5q.jpg"
               alt="img 1"
               fill
               className="object-cover rounded"
@@ -30,7 +30,7 @@ const ResponsiveSection = () => {
           </div>
           <div className="relative w-1/2 h-[240px] md:w-[200px]">
             <img
-              src="https://res.cloudinary.com/dmyudwjwx/image/upload/v1750179058/back-view-woman-posing-ethereal-environment_23-2151113656_scjmmi.webp"
+              src="https://res.cloudinary.com/dmyudwjwx/image/upload/v1750612132/38caca0e-a069-4fff-8fa0-fc9ffaf83eae_hdhuxr.jpg"
               alt="img 2"
               fill
               className="object-cover rounded"
