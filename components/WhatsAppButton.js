@@ -136,8 +136,7 @@ export default WhatsAppButton;
 
 const createWhatsAppURL = (inputs, items, total, delivery, code, subtotal) => {
   const { country, city, apt, address, fname, lname, phone, email } = inputs;
- 
-
+  
 
   // Formatting the message
   const message = `
@@ -159,7 +158,7 @@ const createWhatsAppURL = (inputs, items, total, delivery, code, subtotal) => {
       - Price: $${(() => {
       const colorObj = item.color?.find(c => c.color === item.selectedColor);
       const sizeObj = colorObj?.sizes?.find(s => s.size === item.selectedSize);
-      return sizeObj?.price ?? item.discount;
+      return sizeObj?.price ?? item.price;
     })()}
 
       - Color: ${item.selectedColor}

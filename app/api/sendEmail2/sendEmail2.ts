@@ -21,6 +21,8 @@ export const sendEmail2 = async (formData: FormData) => {
 
   try {
     items = JSON.parse(itemsJSON); // must be a valid array from the client
+    
+    
   } catch (error) {
     console.error("Invalid JSON for items:", error);
   }
@@ -43,7 +45,7 @@ ${items.map((item: any, index: number) => `
   - Price: $${(() => {
       const colorObj = item.color?.find(c => c.color === item.selectedColor);
       const sizeObj = colorObj?.sizes?.find(s => s.size === item.selectedSize);
-      return sizeObj?.price ?? item.discount;
+      return sizeObj?.price ?? item.price;
     })()}
   - Color: ${item.selectedColor}
   - Size: ${item.selectedSize}
